@@ -4,12 +4,13 @@ metadata:
   name: nginx-hello-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+  namespace: nginx-hello
 spec:
   rules:
-    - host: nginx-hello.com
+    - host: hello-world.info
       http: 
         paths:
-          - path: /hello
+          - path: /
             pathType: Prefix
             backend:
               service:
